@@ -383,6 +383,23 @@ nav {
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
+/* Specific image positioning */
+.media-grid img:nth-child(9) {
+  object-position: center 30%;
+}
+
+.media-grid img:nth-child(11) {
+  object-position: center 35%;
+}
+
+.media-grid img:nth-child(12) {
+  object-position: center 65%;
+}
+
+.media-grid img:nth-child(13) {
+  object-position: center 25%;
+}
+
 .video-container {
   position: relative;
   background: var(--black);
