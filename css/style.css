@@ -934,10 +934,20 @@ footer {
   .nav-links a {
     background: var(--white);
     padding: 10px 20px;
-    margin: 5px 0;
-    border-radius: 4px;
+    margin: 0;
+    border-radius: 0;
     width: 100%;
     text-align: center;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .nav-links a:last-child {
+    border-bottom: none;
+  }
+  
+  .nav-links a.btn-gold {
+    background: var(--gold);
+    color: var(--black);
   }
   
   .hero-overlay-bottom {
