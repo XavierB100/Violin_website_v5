@@ -423,9 +423,42 @@ nav {
 }
 
 .video-container audio {
-  height: 60px;
+  height: 80px;
   border-radius: 8px;
-  background: var(--gray);
+  background: linear-gradient(135deg, #f8f8f8 0%, #e8e8e8 100%);
+  padding: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* Custom audio player styling */
+.video-container.audio-container {
+  background: linear-gradient(135deg, #f8f8f8 0%, #e8e8e8 100%);
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 120px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  border: 1px solid #e0e0e0;
+}
+
+.video-container.audio-container::before {
+  content: '🎵';
+  font-size: 2rem;
+  margin-bottom: 10px;
+  filter: grayscale(100%) brightness(0%);
+}
+
+.video-container.audio-container::after {
+  content: 'In My Mothers Eyes - Mio Mitchinson and James Frampton';
+  font-family: 'Playfair Display', serif;
+  font-size: 0.9rem;
+  color: var(--black);
+  text-align: center;
+  margin-top: 10px;
+  font-weight: 600;
 }
 
 /* Calendly Widget Styling */
