@@ -96,6 +96,6 @@ document.addEventListener('DOMContentLoaded', function() {
   // Debounced scroll event
   window.addEventListener('scroll', function() {
     if (scrollTimeout) clearTimeout(scrollTimeout);
-    scrollTimeout = setTimeout(animateOnScroll, 50);
+    scrollTimeout = setTimeout(animateOnScroll, 10);
   });
 });
