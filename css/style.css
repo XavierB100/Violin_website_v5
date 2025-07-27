@@ -910,11 +910,25 @@ footer {
   }
   
   .mobile-menu-btn {
-    display: none;
+    display: block;
   }
   
   .nav-links {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background: var(--white);
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
     display: none;
+    z-index: 1000;
+  }
+  
+  .nav-links.active {
+    display: flex;
   }
   
   .nav-links a:not(.btn-gold) {
@@ -923,17 +937,14 @@ footer {
   
   .nav-links a.btn-gold {
     display: block;
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 1001;
     margin: 0;
-    padding: 10px 20px;
+    padding: 15px 30px;
     background: var(--gold);
     color: var(--black);
     border-radius: 4px;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 600;
+    text-align: center;
   }
   
 
