@@ -400,17 +400,32 @@ nav {
   object-position: center 25%;
 }
 
+.media-grid img:nth-child(14) {
+  object-position: center 35%;
+}
+
+.media-grid img:nth-child(15) {
+  object-position: center 10%;
+}
+
 .video-container {
   position: relative;
   background: var(--black);
 }
 
 .video-container video,
-.video-container iframe {
+.video-container iframe,
+.video-container audio {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border: none;
+}
+
+.video-container audio {
+  height: 60px;
+  border-radius: 8px;
+  background: var(--gray);
 }
 
 /* Calendly Widget Styling */
