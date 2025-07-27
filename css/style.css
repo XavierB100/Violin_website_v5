@@ -931,6 +931,15 @@ footer {
     display: flex;
   }
   
+  .nav-links a {
+    background: var(--white);
+    padding: 10px 20px;
+    margin: 5px 0;
+    border-radius: 4px;
+    width: 100%;
+    text-align: center;
+  }
+  
   .hero-overlay-bottom {
     padding: 20px;
     margin-bottom: 30px;
