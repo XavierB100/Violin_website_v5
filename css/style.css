@@ -1042,8 +1042,8 @@ a:focus, button:focus, input:focus, textarea:focus, select:focus {
 /* Section Reveal Animation */
 section {
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateY(15px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
 }
 section.visible {
   opacity: 1;
