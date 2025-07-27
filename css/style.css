@@ -925,7 +925,6 @@ footer {
     box-shadow: 0 5px 10px rgba(0,0,0,0.1);
     display: none;
     z-index: 1000;
-    min-height: 100vh;
   }
   
   .nav-links.active {
