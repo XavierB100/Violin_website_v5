@@ -98,4 +98,15 @@ document.addEventListener('DOMContentLoaded', function() {
     if (scrollTimeout) clearTimeout(scrollTimeout);
     scrollTimeout = setTimeout(animateOnScroll, 10);
   });
+  
+  // Scroll to calendar function
+  window.scrollToCalendar = function() {
+    const calendarSection = document.querySelector('.calendar-section');
+    if (calendarSection) {
+      calendarSection.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
 });
