@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // Form submission handling
+  // Form submission handling with EmailJS
   const contactForm = document.getElementById('contact-form');
   if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
@@ -47,17 +47,26 @@ document.addEventListener('DOMContentLoaded', function() {
       formStatus.textContent = 'Sending...';
       formStatus.style.color = 'var(--medium-gray)';
       
-      // Simulate form submission
-      setTimeout(() => {
-        formStatus.textContent = 'Message sent successfully!';
-        formStatus.style.color = 'green';
-        contactForm.reset();
-        
-        // Clear status after 5 seconds
-        setTimeout(() => {
-          formStatus.textContent = '';
-        }, 5000);
-      }, 1500);
+      // Send email using EmailJS
+      emailjs.sendForm('service_2662886', 'template_hem2gqe', '#contact-form')
+        .then(function() {
+          formStatus.textContent = 'Message sent successfully!';
+          formStatus.style.color = 'green';
+          contactForm.reset();
+          
+          // Clear status after 5 seconds
+          setTimeout(() => {
+            formStatus.textContent = '';
+          }, 5000);
+        }, function(error) {
+          formStatus.textContent = 'Failed to send message. Please try again.';
+          formStatus.style.color = 'red';
+          
+          // Clear error after 5 seconds
+          setTimeout(() => {
+            formStatus.textContent = '';
+          }, 5000);
+        });
     });
   }
   
