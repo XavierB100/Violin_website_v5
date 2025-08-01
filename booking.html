@@ -32,7 +32,7 @@
     "@context": "https://schema.org",
     "@type": "Service",
     "name": "Professional Violin Performance Booking",
-    "description": "Book professional violinist Dorothé Blake for weddings, funerals, and special events",
+    "description": "Book professional violinist Dorothé Blake for weddings, funerals, special events, and studio sessions",
     "provider": {
       "@type": "Person",
       "name": "Dorothé Blake",
@@ -48,11 +48,11 @@
         "@type": "Offer",
         "name": "Wedding Violin Performance",
         "description": "Professional violin music for wedding ceremonies and receptions",
-        "price": "350",
+        "price": "150",
         "priceCurrency": "GBP",
         "priceSpecification": {
           "@type": "UnitPriceSpecification",
-          "price": "350",
+          "price": "150",
           "priceCurrency": "GBP",
           "unitText": "per event"
         }
@@ -61,26 +61,39 @@
         "@type": "Offer",
         "name": "Funeral Violin Performance",
         "description": "Sensitive violin music for funeral services",
-        "price": "250",
+        "price": "100",
         "priceCurrency": "GBP",
         "priceSpecification": {
           "@type": "UnitPriceSpecification",
-          "price": "250",
+          "price": "100",
           "priceCurrency": "GBP",
           "unitText": "per event"
         }
       },
       {
         "@type": "Offer",
-        "name": "Corporate Event Violin Performance",
-        "description": "Professional violin entertainment for corporate events",
-        "price": "300",
+        "name": "Special Event Violin Performance",
+        "description": "Professional violin entertainment for special events",
+        "price": "150",
         "priceCurrency": "GBP",
         "priceSpecification": {
           "@type": "UnitPriceSpecification",
-          "price": "300",
+          "price": "150",
           "priceCurrency": "GBP",
           "unitText": "per event"
+        }
+      },
+      {
+        "@type": "Offer",
+        "name": "Studio Session Violin Recording",
+        "description": "Professional recording of violin parts, remote or in studio, tailored to your track, genre & tempo",
+        "price": "150",
+        "priceCurrency": "GBP",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "150",
+          "priceCurrency": "GBP",
+          "unitText": "per session"
         }
       }
     ]
@@ -108,7 +121,7 @@
       "longitude": "-0.1278"
     },
     "openingHours": "Mo-Su 09:00-21:00",
-    "priceRange": "£250-£500",
+    "priceRange": "£100-£200",
     "serviceArea": {
       "@type": "Country",
       "name": "United Kingdom"
@@ -170,7 +183,7 @@
           <div class="info-card" style="cursor: pointer;" onclick="scrollToCalendar()">
             <i class="fas fa-music"></i>
             <h3>3. Confirm & Book</h3>
-            <p>I'll confirm availability, provide a quote, and secure your date with a deposit.</p>
+            <p>I'll confirm availability, provide a quote, and secure your date with a deposit. Payments are processed securely through Stripe.</p>
           </div>
         </div>
       </div>
@@ -182,7 +195,7 @@
         <div class="pricing-grid">
           <div class="pricing-card">
             <h3>Weddings</h3>
-            <p class="price">From £350</p>
+            <p class="price">From £150</p>
             <ul>
               <li>Ceremony music</li>
               <li>1 hour reception</li>
@@ -191,7 +204,7 @@
           </div>
           <div class="pricing-card">
             <h3>Funerals</h3>
-            <p class="price">From £250</p>
+            <p class="price">From £100</p>
             <ul>
               <li>Ceremony music</li>
               <li>2 selected pieces</li>
@@ -200,11 +213,41 @@
           </div>
           <div class="pricing-card">
             <h3>Special Events</h3>
-            <p class="price">From £300</p>
+            <p class="price">From £150</p>
             <ul>
               <li>1-2 hour performance</li>
               <li>Classical or contemporary</li>
               <li>Background or featured</li>
+            </ul>
+          </div>
+          <div class="pricing-card">
+            <h3>Studio Sessions</h3>
+            <p class="price">From £150</p>
+            <ul>
+              <li>Professional recording</li>
+              <li>Remote or in studio</li>
+              <li>Tailored to your track</li>
+              <li>Ideal for composers, producers, filmmakers & content creators</li>
+            </ul>
+          </div>
+          <div class="pricing-card">
+            <h3>Church Events</h3>
+            <p class="price">From £150</p>
+            <ul>
+              <li>Worship service music</li>
+              <li>Special church events</li>
+              <li>Hymn accompaniment</li>
+              <li>Contemporary worship</li>
+            </ul>
+          </div>
+          <div class="pricing-card">
+            <h3>Christmas & Easter</h3>
+            <p class="price">From £150</p>
+            <ul>
+              <li>Christmas carols & Easter hymns</li>
+              <li>Festive celebrations</li>
+              <li>Traditional & contemporary</li>
+              <li>Church & private events</li>
             </ul>
           </div>
         </div>
@@ -265,7 +308,7 @@
         <div class="faq-grid">
           <div class="faq-item" id="faq-1">
             <h3>What music styles do you play?</h3>
-            <p>I specialize in classical music but also perform contemporary, pop, jazz, and worship music. I'm happy to discuss your specific musical preferences for your event.</p>
+            <p>I specialise in classical music but also perform contemporary, pop, jazz, and worship music. With extensive experience in improvisation across any music genre, I can adapt and create unique musical moments tailored to your specific needs. I'm happy to discuss your specific musical preferences for your event.</p>
           </div>
           <div class="faq-item" id="faq-2">
             <h3>Do you travel outside London?</h3>
@@ -281,11 +324,11 @@
           </div>
           <div class="faq-item">
             <h3>What equipment do you bring?</h3>
-            <p>I bring my own violin and can provide a small amplifier if needed for larger venues. For very large events, you may need to provide a PA system.</p>
+            <p>I bring my own acoustic or electric violin and can provide a small amplifier if needed for larger venues. For very large events, you may need to provide a PA system.</p>
           </div>
           <div class="faq-item">
             <h3>What is your cancellation policy?</h3>
-            <p>A 50% deposit is required to secure your date. Full refund if cancelled more than 3 months before the event. Details will be in your booking contract.</p>
+            <p>A 50% deposit is required to secure your date. Full refund if cancelled more than 1 week before the event. Details will be in your booking contract.</p>
           </div>
         </div>
       </div>
