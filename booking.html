@@ -133,6 +133,86 @@
   }
   </script>
   
+  <!-- Breadcrumb Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://violinplayer.pro/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Booking",
+        "item": "https://violinplayer.pro/booking.html"
+      }
+    ]
+  }
+  </script>
+  
+  <!-- FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What music styles do you play?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "I specialise in classical music but also perform contemporary, pop, jazz, and worship music. With extensive experience in improvisation across any music genre, I can adapt and create unique musical moments tailored to your specific needs. I'm happy to discuss your specific musical preferences for your event."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you travel outside London?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, I'm available for events throughout the UK. Travel costs may apply for locations outside Greater London."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you learn specific songs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely! I can learn up to 2 special requests for your event with sufficient notice (typically 4 weeks). Sheet music may be required for some pieces."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How far in advance should I book?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For weddings, I recommend booking 6-12 months in advance, especially for peak season (May-September). For other events, 1-3 months notice is usually sufficient."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What equipment do you bring?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "I bring my own acoustic or electric violin and can provide a small amplifier if needed for larger venues. For very large events, you may need to provide a PA system."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is your cancellation policy?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A 50% deposit is required to secure your date. Full refund if cancelled more than 1 week before the event. Details will be in your booking contract."
+        }
+      }
+    ]
+  }
+  </script>
+  
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -154,6 +234,16 @@
       <a href="index.html#testimonials">Testimonials</a>
       <a href="index.html#contact">Contact</a>
       <a href="booking.html" class="btn-gold" aria-current="page">Book Now</a>
+    </div>
+  </nav>
+  
+  <!-- Breadcrumb Navigation -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <div class="container">
+      <ol>
+        <li><a href="index.html">Home</a></li>
+        <li aria-current="page">Booking</li>
+      </ol>
     </div>
   </nav>
 
