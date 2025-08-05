@@ -235,15 +235,26 @@
     img{max-width:100%;height:auto;display:block}
   </style>
   
-  <!-- Preload Critical Resources -->
-  <link rel="preload" href="css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="css/style.css"></noscript>
-  <link rel="preload" href="assets/IMG_0101.jpeg" as="image">
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans:wght@400;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"></noscript>
+  <!-- Resource hints for performance -->
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+  <link rel="dns-prefetch" href="//www.googletagmanager.com">
+  <link rel="dns-prefetch" href="//cdn-cookieyes.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  
+  <!-- Non-blocking CSS loading -->
+  <link rel="preload" href="css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="css/style.css"></noscript>
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></noscript>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans:wght@400;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"></noscript>
+  
+  <!-- Critical image preload -->
+  <link rel="preload" href="assets/IMG_0101.jpeg" as="image">
+  
+  <!-- Favicon and theme -->
   <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" href="assets/favicon.ico">
   <meta name="theme-color" content="#D4AF37">
@@ -271,7 +282,15 @@
 
   <!-- Hero Section -->
   <header class="hero">
-    <img src="assets/IMG_0101.jpeg" alt="Dorothé Blake performing violin at an elegant event" class="hero-image" loading="eager" width="1920" height="1080" fetchpriority="high">
+    <img src="assets/IMG_0101.jpeg" 
+         srcset="assets/IMG_0101.jpeg 1920w"
+         sizes="100vw"
+         alt="Dorothé Blake performing violin at an elegant event" 
+         class="hero-image" 
+         loading="eager" 
+         width="1920" 
+         height="1080" 
+         fetchpriority="high">
     <div class="hero-overlay-bottom">
       <h1>Dorothé Blake</h1>
       <p>Professional Violinist for Weddings, Funerals, Studios & Special Events</p>
@@ -398,14 +417,14 @@
         
         <!-- Videos -->
         <div class="video-container">
-          <video controls preload="metadata" poster="assets/IMG_0345.jpeg">
+          <video controls preload="none" poster="assets/IMG_0345.jpeg" loading="lazy">
             <source src="assets/672a614ab91c4020ce00495cccf18a4a.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
         </div>
         
         <div class="video-container">
-          <video controls preload="metadata" poster="assets/IMG_0344.jpeg">
+          <video controls preload="none" poster="assets/IMG_0344.jpeg" loading="lazy">
             <source src="assets/96760b3242fd2ad4386567e08833bafb.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
@@ -413,7 +432,7 @@
         
         <!-- Audio File -->
         <div class="video-container audio-container">
-          <audio controls preload="metadata">
+          <audio controls preload="none">
             <source src="assets/In My Mothers Eyes - Mio Mitchinson and James Frampton.m4a" type="audio/mp4">
             Your browser does not support the audio tag.
           </audio>
@@ -582,14 +601,14 @@
 
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-1TCPHK7E7W"></script>
-  <script src="js/analytics.js"></script>
+  <script src="js/analytics.js" async></script>
   
-  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-  <script>
+  <script src="https://cdn.emailjs.com/dist/email.min.js" defer></script>
+  <script defer>
     (function(){
       emailjs.init("uavrA6tINjU6pJAZH");
     })();
   </script>
-  <script src="js/script.js"></script>
+  <script src="js/script.js" defer></script>
 </body>
 </html>
