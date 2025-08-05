@@ -243,13 +243,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   
-  <!-- Non-blocking CSS loading -->
-  <link rel="preload" href="css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="css/style.css"></noscript>
-  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></noscript>
+  <!-- Optimized CSS loading - keep main CSS blocking but optimize fonts -->
+  <link rel="stylesheet" href="css/style.css">
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans:wght@400;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"></noscript>
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></noscript>
   
   <!-- Critical image preload -->
   <link rel="preload" href="assets/IMG_0101.jpeg" as="image">
@@ -417,14 +416,14 @@
         
         <!-- Videos -->
         <div class="video-container">
-          <video controls preload="none" poster="assets/IMG_0345.jpeg" loading="lazy">
+          <video controls preload="metadata" poster="assets/IMG_0345.jpeg">
             <source src="assets/672a614ab91c4020ce00495cccf18a4a.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
         </div>
         
         <div class="video-container">
-          <video controls preload="none" poster="assets/IMG_0344.jpeg" loading="lazy">
+          <video controls preload="metadata" poster="assets/IMG_0344.jpeg">
             <source src="assets/96760b3242fd2ad4386567e08833bafb.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
@@ -432,7 +431,7 @@
         
         <!-- Audio File -->
         <div class="video-container audio-container">
-          <audio controls preload="none">
+          <audio controls preload="metadata">
             <source src="assets/In My Mothers Eyes - Mio Mitchinson and James Frampton.m4a" type="audio/mp4">
             Your browser does not support the audio tag.
           </audio>
@@ -601,14 +600,14 @@
 
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-1TCPHK7E7W"></script>
-  <script src="js/analytics.js" async></script>
+  <script src="js/analytics.js"></script>
   
-  <script src="https://cdn.emailjs.com/dist/email.min.js" defer></script>
-  <script defer>
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
     (function(){
       emailjs.init("uavrA6tINjU6pJAZH");
     })();
   </script>
-  <script src="js/script.js" defer></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
