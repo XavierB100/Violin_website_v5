@@ -12,20 +12,42 @@
   <meta name="geo.region" content="GB">
   <meta name="geo.placename" content="London">
   
+  <!-- Additional SEO Meta Tags -->
+  <meta name="rating" content="5">
+  <meta name="distribution" content="global">
+  <meta name="revisit-after" content="7 days">
+  <meta name="format-detection" content="telephone=yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Dorothé Blake Violinist">
+  
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Dorothé Blake | Professional Violinist for Weddings & Events">
   <meta property="og:description" content="Professional violinist with 40+ years experience. Available for weddings, funerals, and special events across London and UK.">
   <meta property="og:image" content="https://violinplayer.pro/assets/IMG_0101.jpeg">
+  <meta property="og:image:width" content="1920">
+  <meta property="og:image:height" content="1080">
+  <meta property="og:image:alt" content="Dorothé Blake performing violin at an elegant event">
   <meta property="og:url" content="https://violinplayer.pro">
   <meta property="og:site_name" content="Dorothé Blake - Professional Violinist">
   <meta property="og:locale" content="en_GB">
+  <meta property="og:updated_time" content="2025-01-27T00:00:00+00:00">
+  <meta property="article:author" content="Dorothé Blake">
+  <meta property="business:contact_data:street_address" content="London">
+  <meta property="business:contact_data:locality" content="London">
+  <meta property="business:contact_data:country_name" content="United Kingdom">
+  <meta property="business:contact_data:phone_number" content="+44 7768 815926">
+  <meta property="business:contact_data:email" content="Dorothe@hotmail.co.uk">
   
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Dorothé Blake | Professional Violinist">
   <meta name="twitter:description" content="Professional violinist with 40+ years experience. Available for weddings, funerals, and special events across London and UK.">
   <meta name="twitter:image" content="https://violinplayer.pro/assets/IMG_0101.jpeg">
+  <meta name="twitter:image:alt" content="Dorothé Blake performing violin at an elegant event">
+  <meta name="twitter:site" content="@dorotheblake">
+  <meta name="twitter:creator" content="@dorotheblake">
   
   <!-- Canonical URL -->
   <link rel="canonical" href="https://violinplayer.pro/">
@@ -101,10 +123,126 @@
     }
   }
   </script>
-  <link rel="stylesheet" href="css/style.css">
+  
+  <!-- Breadcrumb Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://violinplayer.pro/"
+      }
+    ]
+  }
+  </script>
+  
+  <!-- Review Schema for Testimonials -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Dorothé Blake - Professional Violinist",
+    "review": [
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Calene and Ive"
+        },
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        },
+        "reviewBody": "Dorothé's performance at our wedding was absolutely magical. She learned our special song perfectly and brought many guests to tears with her beautiful playing. Her professionalism and attention to detail made our ceremony unforgettable.",
+        "datePublished": "2024-12-01"
+      },
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Carol"
+        },
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        },
+        "reviewBody": "The violin music at my mother's funeral was so moving and exactly what she would have wanted. Dorothé handled everything with such sensitivity and created a truly beautiful atmosphere. Her playing brought comfort to everyone present.",
+        "datePublished": "2024-11-15"
+      },
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Rebecca"
+        },
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        },
+        "reviewBody": "Dorothé played at our deal of the year corporate event and was absolutely brilliant. She adapted her repertoire perfectly to our audience and created such an elegant atmosphere.",
+        "datePublished": "2024-10-20"
+      },
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Sam"
+        },
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        },
+        "reviewBody": "Dorothé recorded violin parts for our Christmas gospel album and she was wonderful. She captured the perfect emotional tone for each track and her playing brought the whole project to life.",
+        "datePublished": "2024-12-10"
+      }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "4",
+      "bestRating": "5",
+      "worstRating": "5"
+    }
+  }
+  </script>
+  
+  <!-- Critical CSS Inline -->
+  <style>
+    :root{--gold:#D4AF37;--gold-light:#E8C874;--black:#000000;--white:#FFFFFF;--gray:#F5F5F5;--dark-gray:#222222;--medium-gray:#888888}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Open Sans',sans-serif;line-height:1.6;color:var(--black);background-color:var(--white);overflow-x:hidden}
+    nav{display:flex;justify-content:space-between;align-items:center;padding:20px 5%;background-color:var(--white);box-shadow:0 2px 10px rgba(0,0,0,0.1);position:fixed;width:100%;z-index:1000;top:0;height:80px}
+    .logo{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:var(--black)}
+    .hero{position:relative;height:100vh;display:flex;align-items:flex-end;justify-content:center;text-align:center;color:var(--white);margin-top:80px}
+    .hero-image{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:contain;background-color:var(--white);z-index:-1}
+    .hero-overlay-bottom{position:relative;background-color:rgba(0,0,0,0.7);padding:40px;border-radius:8px;width:90%;max-width:800px;margin-bottom:50px;backdrop-filter:blur(2px)}
+    .hero h1{font-size:3.5rem;margin-bottom:15px;text-shadow:0 2px 4px rgba(0,0,0,0.3);color:var(--gold);font-family:'Playfair Display',serif;font-weight:700}
+    .hero p{font-size:1.3rem;margin-bottom:30px;text-shadow:0 1px 2px rgba(0,0,0,0.3)}
+    .btn-gold{display:inline-block;background:var(--gold);color:var(--black);padding:12px 24px;border:none;border-radius:4px;font-weight:600;cursor:pointer;transition:all 0.3s ease;text-align:center;text-decoration:none}
+    .btn-outline{display:inline-block;background:transparent;color:var(--white);padding:12px 24px;border:2px solid var(--white);border-radius:4px;font-weight:600;cursor:pointer;transition:all 0.3s ease;text-decoration:none}
+    .hero-buttons{display:flex;gap:15px;justify-content:center;flex-wrap:wrap}
+    .nav-links{display:flex;gap:30px;align-items:center;height:80px}
+    .nav-links a{color:var(--black);transition:color 0.3s;font-weight:600;text-decoration:none}
+    .mobile-menu-btn{display:none;background:none;border:none;font-size:1.5rem;cursor:pointer;color:var(--black);z-index:1001}
+    img{max-width:100%;height:auto;display:block}
+  </style>
+  
+  <!-- Preload Critical Resources -->
+  <link rel="preload" href="css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="css/style.css"></noscript>
+  <link rel="preload" href="assets/IMG_0101.jpeg" as="image">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans:wght@400;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"></noscript>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" href="assets/favicon.ico">
@@ -133,7 +271,7 @@
 
   <!-- Hero Section -->
   <header class="hero">
-    <img src="assets/IMG_0101.jpeg" alt="Dorothé Blake performing violin at an elegant event" class="hero-image" loading="lazy" width="1920" height="1080">
+    <img src="assets/IMG_0101.jpeg" alt="Dorothé Blake performing violin at an elegant event" class="hero-image" loading="eager" width="1920" height="1080" fetchpriority="high">
     <div class="hero-overlay-bottom">
       <h1>Dorothé Blake</h1>
       <p>Professional Violinist for Weddings, Funerals, Studios & Special Events</p>
