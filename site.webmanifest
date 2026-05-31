@@ -1,0 +1,22 @@
+{
+  "name": "Dorothé Blake - Professional Violinist",
+  "short_name": "Dorothé Blake",
+  "description": "Professional London violinist for weddings, funerals, events and studio sessions.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "icons": [
+    {
+      "src": "/assets/icons/icon-192.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "/assets/icons/icon-512.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ]
+}

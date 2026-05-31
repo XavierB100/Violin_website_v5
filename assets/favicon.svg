@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Dorothé Blake violin mark">
+  <rect width="64" height="64" rx="14" fill="#171412"/>
+  <path d="M38 9v31a9 9 0 1 1-5-8.1V14l17-4v23a9 9 0 1 1-5-8.1V9" fill="none" stroke="#d6a657" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M19 49c6-8 18-18 31-23" fill="none" stroke="#f3d6d2" stroke-width="3" stroke-linecap="round"/>
+</svg>
