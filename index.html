@@ -35,7 +35,7 @@
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.jpg">
   <link rel="manifest" href="/site.webmanifest">
-  <link rel="preload" href="/assets/responsive/performance-1200.webp" as="image" type="image/webp" imagesrcset="/assets/responsive/performance-640.webp 640w, /assets/responsive/performance-1200.webp 1200w" imagesizes="(max-width: 1060px) 100vw, 54vw" fetchpriority="high">
+  <link rel="preload" href="/assets/responsive/performance-1200.avif" as="image" type="image/avif" imagesrcset="/assets/responsive/performance-640.avif 640w, /assets/responsive/performance-800.avif 800w, /assets/responsive/performance-1200.avif 1200w" imagesizes="(max-width: 1060px) 100vw, 54vw" fetchpriority="high">
   <link rel="preconnect" href="https://cdn-cookieyes.com">
   <link rel="preload" href="/assets/fonts/cormorant-garamond-latin-v21.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/inter-latin-v20.woff2" as="font" type="font/woff2" crossorigin>
@@ -193,6 +193,7 @@
         </div>
       </div>
       <picture class="hero-media">
+        <source type="image/avif" srcset="/assets/responsive/performance-640.avif 640w, /assets/responsive/performance-800.avif 800w, /assets/responsive/performance-1200.avif 1200w" sizes="(max-width: 1060px) 100vw, 54vw">
         <img src="/assets/responsive/performance-1200.webp" srcset="/assets/responsive/performance-640.webp 640w, /assets/responsive/performance-1200.webp 1200w" sizes="(max-width: 1060px) 100vw, 54vw" alt="Dorothé Blake smiling while performing violin at an elegant indoor event" width="3000" height="4000" fetchpriority="high">
       </picture>
     </section>
@@ -230,9 +231,10 @@
 
     <section class="section section-soft" id="about" aria-labelledby="about-title">
       <div class="container about-layout">
-        <div class="photo-frame">
-          <img src="/assets/responsive/portrait-1200.webp" srcset="/assets/responsive/portrait-640.webp 640w, /assets/responsive/portrait-1200.webp 1200w" sizes="(max-width: 780px) 100vw, 50vw" alt="Dorothé Blake holding her violin in a formal performance setting" loading="lazy" width="1320" height="2027">
-        </div>
+        <picture class="photo-frame">
+          <source type="image/avif" srcset="/assets/responsive/portrait-640.avif 640w, /assets/responsive/portrait-800.avif 800w, /assets/responsive/portrait-1200.avif 1200w" sizes="(max-width: 480px) 300px, (max-width: 780px) 360px, (max-width: 1060px) 320px, 380px">
+          <img src="/assets/responsive/portrait-1200.webp" srcset="/assets/responsive/portrait-640.webp 640w, /assets/responsive/portrait-1200.webp 1200w" sizes="(max-width: 480px) 300px, (max-width: 780px) 360px, (max-width: 1060px) 320px, 380px" alt="Dorothé Blake holding her violin in a formal performance setting" loading="lazy" width="1320" height="2027">
+        </picture>
         <div class="about-copy">
           <p class="small-title">About Dorothé</p>
           <h2 id="about-title">Experience. Heart. Excellence.</h2>

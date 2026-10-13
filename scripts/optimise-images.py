@@ -27,3 +27,10 @@ for original, name in photos.items():
             target = output / f"{name}-{width}.webp"
             resized.save(target, "WEBP", quality=82, method=6)
             print(f"{target.name}: {target.stat().st_size:,} bytes")
+        if name in {"performance", "portrait"}:
+            for width in (640, 800, 1200):
+                resized = source.copy()
+                resized.thumbnail((width, 2400), Image.Resampling.LANCZOS)
+                target = output / f"{name}-{width}.avif"
+                resized.save(target, "AVIF", quality=55, speed=6)
+                print(f"{target.name}: {target.stat().st_size:,} bytes")
