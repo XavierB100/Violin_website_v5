@@ -7,7 +7,7 @@
 - Align canonical, Open Graph, breadcrumb, internal-link and sitemap URLs with the clean URLs already used by the live host. Explicit Netlify redirects consolidate `.html` variants.
 - Describe the existing starting prices with `PriceSpecification.minPrice`, rather than implying a fixed final quote. Link the same person identity across artist and booking markup.
 - Add missing booking social-image descriptions and UK locale metadata.
-- Provide responsive WebP copies of the existing photographs. The large hero copy is 138,612 bytes versus 1,688,159 bytes for the original. Original files remain available.
+- Provide responsive WebP copies of the existing photographs, plus AVIF sources for the hero and About portrait with WebP fallbacks. The large hero copy is 138,612 bytes versus 1,688,159 bytes for the original. Original files remain available.
 - Defer audio/video downloads until playback, and lazy-load the calendar.
 - Serve the existing Cormorant Garamond and Inter fonts locally, with early preload and swap rendering; retain their OFL licences. This removes the Google Fonts stylesheet request and two external font connections.
 - Use accurate, descriptive gallery alt text without changing the visible biography or service copy.
@@ -43,3 +43,13 @@ Run `python3 scripts/check-site.py`, `node --check js/script.js` and `node --che
 - [GA4 recommended events](https://developers.google.com/analytics/devguides/collection/ga4/reference/events#generate_lead)
 
 Metadata and usability improvements do not guarantee rankings or bookings. Measure actual enquiry quality and search traffic after release.
+
+## Final performance check
+
+Single simulated-mobile Lighthouse runs: production performance 68/100, final PR preview 80/100. First contentful paint changed from 3.1s to 1.7s; largest contentful paint from 18.3s to 4.6s; initial transfer from 3,314 KiB to 385 KiB. Final layout shift was 0 and total blocking time 40ms. The preview-only Netlify review toolbar was blocked for the final measurement; the site's own consent, analytics and enquiry scripts were retained. These are lab observations, not real-user or ranking guarantees.
+
+The raw summary and measurement settings are in [docs/performance-review-2026-10-13.json](docs/performance-review-2026-10-13.json). LCP still exceeds Google's 2.5s good-experience target in this simulated run, so post-release field measurement remains necessary. The preview's SEO score is 69 solely because Netlify intentionally sends `X-Robots-Tag: noindex`; every other automated SEO check passed. Do not remove preview noindex to improve the score.
+
+The final visual review restores the original gold colours as requested; the earlier zero-violation accessibility scan is not a conformance claim for the restored palette. Gallery photos retain full proportions, recordings use a separate grid, and testimonial author spacing is 20px. Checked at 320, 390, 580, 768, 820, 1024 and 1440 pixels with no gallery overlap or horizontal overflow.
+
+Reference: [Google's Core Web Vitals guidance](https://developers.google.com/search/docs/appearance/core-web-vitals).
