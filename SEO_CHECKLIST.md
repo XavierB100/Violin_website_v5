@@ -9,7 +9,10 @@
 - Add missing booking social-image descriptions and UK locale metadata.
 - Provide responsive WebP copies of the existing photographs. The large hero copy is 138,612 bytes versus 1,688,159 bytes for the original. Original files remain available.
 - Defer audio/video downloads until playback, and lazy-load the calendar.
-- Improve mobile navigation, portrait layout, gallery density, keyboard access, contrast, enquiry shortcuts and form feedback.
+- Serve the existing Cormorant Garamond and Inter fonts locally, with early preload and swap rendering; retain their OFL licences. This removes the Google Fonts stylesheet request and two external font connections.
+- Use accurate, descriptive gallery alt text without changing the visible biography or service copy.
+- Restore the original gold styling; compact testimonials and remove the extra form/availability prose requested during review.
+- Improve mobile navigation, portrait layout, uncropped gallery photographs, keyboard access, enquiry shortcuts and form feedback.
 - Count `generate_lead` only after EmailJS acknowledges a successful enquiry. Remove the second booking page-view event. This event means provider acceptance, not inbox delivery or a confirmed booking.
 
 ## Verified before deployment
