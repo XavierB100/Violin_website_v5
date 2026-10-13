@@ -39,7 +39,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;600;700;800;850&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/style.css?v=20261013-1">
+  <link rel="stylesheet" href="/css/style.css?v=20261013-2">
 
   <script type="application/ld+json">
   {
@@ -282,14 +282,16 @@
           <h2 id="gallery-title">Moments in music</h2>
           <p>A small selection of live performances, event settings and recordings.</p>
         </div>
-        <div class="media-grid">
-          <img src="/assets/responsive/performance-1200.webp" srcset="/assets/responsive/performance-640.webp 640w, /assets/responsive/performance-1200.webp 1200w" sizes="(max-width: 780px) 100vw, 50vw" alt="Dorothé Blake performing violin at a corporate event" loading="lazy" width="3000" height="4000">
-          <img src="/assets/responsive/outdoor-1200.webp" srcset="/assets/responsive/outdoor-640.webp 640w, /assets/responsive/outdoor-1200.webp 1200w" sizes="(max-width: 780px) 100vw, 50vw" alt="Dorothé Blake performing violin outdoors for a funeral service" loading="lazy" width="2048" height="1536">
-          <img src="/assets/responsive/event-1200.webp" srcset="/assets/responsive/event-640.webp 640w, /assets/responsive/event-1200.webp 1200w" sizes="(max-width: 780px) 100vw, 50vw" alt="Dorothé Blake performing violin at an event" loading="lazy" width="1320" height="842">
-          <img src="/assets/responsive/church-1200.webp" srcset="/assets/responsive/church-640.webp 640w, /assets/responsive/church-1200.webp 1200w" sizes="(max-width: 780px) 100vw, 50vw" alt="Dorothé Blake performing violin in a church setting" loading="lazy" width="1320" height="1416">
-          <img src="/assets/responsive/strings-1200.webp" srcset="/assets/responsive/strings-640.webp 640w, /assets/responsive/strings-1200.webp 1200w" sizes="(max-width: 780px) 100vw, 50vw" alt="Close-up of violin strings and bow during performance" loading="lazy" width="1320" height="983">
-          <img src="/assets/responsive/stage-1200.webp" srcset="/assets/responsive/stage-640.webp 640w, /assets/responsive/stage-1200.webp 1200w" sizes="(max-width: 780px) 100vw, 50vw" alt="Dorothé Blake performing solo violin on stage" loading="lazy" width="1320" height="869">
-          <div class="video-container" id="listen" tabindex="-1">
+        <div class="photo-gallery">
+          <img src="/assets/responsive/performance-1200.webp" srcset="/assets/responsive/performance-640.webp 640w, /assets/responsive/performance-1200.webp 1200w" sizes="(max-width: 1060px) 50vw, 390px" alt="Dorothé Blake performing violin at a corporate event" loading="lazy" width="3000" height="4000">
+          <img src="/assets/responsive/outdoor-1200.webp" srcset="/assets/responsive/outdoor-640.webp 640w, /assets/responsive/outdoor-1200.webp 1200w" sizes="(max-width: 1060px) 50vw, 390px" alt="Dorothé Blake performing violin outdoors for a funeral service" loading="lazy" width="2048" height="1536">
+          <img src="/assets/responsive/event-1200.webp" srcset="/assets/responsive/event-640.webp 640w, /assets/responsive/event-1200.webp 1200w" sizes="(max-width: 1060px) 50vw, 390px" alt="Dorothé Blake performing violin at an event" loading="lazy" width="1320" height="842">
+          <img src="/assets/responsive/church-1200.webp" srcset="/assets/responsive/church-640.webp 640w, /assets/responsive/church-1200.webp 1200w" sizes="(max-width: 1060px) 50vw, 390px" alt="Dorothé Blake performing violin in a church setting" loading="lazy" width="1320" height="1416">
+          <img src="/assets/responsive/strings-1200.webp" srcset="/assets/responsive/strings-640.webp 640w, /assets/responsive/strings-1200.webp 1200w" sizes="(max-width: 1060px) 50vw, 390px" alt="Close-up of violin strings and bow during performance" loading="lazy" width="1320" height="983">
+          <img src="/assets/responsive/stage-1200.webp" srcset="/assets/responsive/stage-640.webp 640w, /assets/responsive/stage-1200.webp 1200w" sizes="(max-width: 1060px) 50vw, 390px" alt="Dorothé Blake performing solo violin on stage" loading="lazy" width="1320" height="869">
+        </div>
+        <div class="recordings-grid" id="listen" tabindex="-1">
+          <div class="video-container">
             <video aria-label="Dorothé Blake violin performance" controls preload="none" poster="/assets/responsive/video-poster-640.webp">
               <source src="/assets/672a614ab91c4020ce00495cccf18a4a.mp4" type="video/mp4">
               Your browser does not support the video tag.
@@ -381,15 +383,13 @@
               </div>
               <div class="form-group full">
                 <label for="message">Your Message</label>
-                <textarea id="message" name="message" aria-describedby="message-hint" required></textarea>
-                <p class="form-hint" id="message-hint">Tell Dorothé the venue or town, approximate timings and any music you have in mind.</p>
+                <textarea id="message" name="message" required></textarea>
               </div>
             </div>
             <div class="form-submit">
               <button type="submit" class="btn btn-primary" disabled>Send Enquiry</button>
               <div class="form-status" id="form-status" role="status" aria-live="polite" aria-atomic="true"></div>
             </div>
-            <p class="form-hint">Prefer to contact Dorothé directly? <a href="mailto:Dorothe@hotmail.co.uk">Email</a> or <a href="https://wa.me/447768815926">WhatsApp</a>. Your details are used to respond to your enquiry. <a href="/privacy">Privacy policy</a>.</p>
           </form>
           <aside class="direct-contact" aria-label="Direct contact">
             <a class="contact-method" href="https://wa.me/447768815926">
@@ -463,6 +463,6 @@
       emailjs.init("uavrA6tINjU6pJAZH");
     }
   </script>
-  <script src="/js/script.js?v=20261013-1"></script>
+  <script src="/js/script.js?v=20261013-2"></script>
 </body>
 </html>

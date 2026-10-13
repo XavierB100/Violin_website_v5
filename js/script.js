@@ -114,7 +114,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const submit = contactForm.querySelector('[type="submit"]');
 
       if (!window.emailjs) {
-        status.textContent = "The form is unavailable. Your message has not been sent. Please use the email or WhatsApp link below; your details are still here to copy.";
+        status.textContent = "The form is unavailable. Your message has not been sent. Please use the email or WhatsApp contact details; your details are still here to copy.";
         return;
       }
 
@@ -125,11 +125,11 @@ document.addEventListener("DOMContentLoaded", function () {
       status.textContent = "Sending your enquiry…";
       try {
         await window.emailjs.sendForm("service_2662886", "template_hem2gqe", "#contact-form");
-        status.textContent = "Thank you — your enquiry has been sent. Dorothé will reply to discuss your event. Your date is confirmed only after you agree the booking details.";
+        status.textContent = "Thank you — your enquiry has been sent. Dorothé will reply to discuss your event.";
         contactForm.dispatchEvent(new CustomEvent("enquiry:sent", { bubbles: true }));
         contactForm.reset();
       } catch {
-        status.textContent = "Your enquiry could not be sent. Please email or WhatsApp Dorothé using the links below. Your details are still here to copy or try again.";
+        status.textContent = "Your enquiry could not be sent. Please email or WhatsApp Dorothé using the contact details. Your details are still here to copy or try again.";
       } finally {
         sending = false;
         submit.disabled = false;
