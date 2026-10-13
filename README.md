@@ -10,7 +10,7 @@ This is a personal website for Dorothé Blake, a classically trained violinist w
 - Contact form with EmailJS integration
 - Direct contact options (WhatsApp, phone, email)
 - Social media integration
-- Fully accessible and SEO-optimized
+- Responsive layouts and keyboard-accessible navigation
 - Structured data markup for search engines
 - Comprehensive meta tags and Open Graph support
 
@@ -22,7 +22,7 @@ This is a personal website for Dorothé Blake, a classically trained violinist w
 - **Sitemap**: XML sitemap for search engine indexing
 - **Robots.txt**: Proper search engine crawling directives
 - **Canonical URLs**: Prevent duplicate content issues
-- **Performance**: GZIP compression, browser caching, and security headers
+- **Performance**: Responsive WebP images, deferred media loading, caching and security headers
 - **Mobile Optimization**: Responsive design with proper viewport settings
 
 ## Target Keywords
@@ -38,7 +38,7 @@ This is a personal website for Dorothé Blake, a classically trained violinist w
 
 ## Getting Started
 1. Clone or download this repository
-2. Open `index.html` in your browser to view the site locally
+2. Serve the directory over HTTP with a static server that resolves clean URLs (for example, Netlify Dev); root-relative assets require HTTP
 3. Edit content in the HTML files as needed
 4. Deploy to your hosting provider (Netlify recommended)
 
@@ -56,7 +56,7 @@ This is a personal website for Dorothé Blake, a classically trained violinist w
 - `.htaccess` – Server configuration for SEO and performance
 
 ## Deployment
-This website is optimized for deployment on Netlify with a Cloudflare domain (violinplayer.pro). The site includes:
+The live site is served by Netlify at violinplayer.pro. Netlify uses `_headers` and `_redirects`; `.htaccess` is legacy Apache configuration and is not applied by Netlify. The site includes:
 - Proper redirects for www to non-www
 - HTTPS enforcement
 - GZIP compression
@@ -71,3 +71,7 @@ This website is optimized for deployment on Netlify with a Cloudflare domain (vi
 
 ## License
 This project is for personal use. Contact Dorothé Blake for commercial inquiries. 
+
+## Review and validation
+
+See [SEO_CHECKLIST.md](SEO_CHECKLIST.md) for verified checks and account-level follow-up. Run `python3 scripts/check-site.py` and `node --check js/script.js`. Image copies can be regenerated with `uv run --with pillow python scripts/optimise-images.py`; originals are retained.

@@ -1,0 +1,48 @@
+{
+  "note": "Single simulated mobile lab runs, not field Core Web Vitals or ranking predictions. The preview toolbar script was blocked only during the final audit; site analytics, consent and enquiry scripts were retained. Preview noindex is intentional.",
+  "testedPreviewCommit": "8c722ca",
+  "runs": [
+    {
+      "run": "Production baseline",
+      "url": "https://violinplayer.pro/",
+      "fetchTime": "2026-10-13T02:22:33.153Z",
+      "lighthouseVersion": "13.5.0",
+      "performanceScore": 68.0,
+      "seoScore": 100,
+      "throttlingMethod": "simulate",
+      "blockedUrlPatterns": null,
+      "metrics": {
+        "first-contentful-paint": 3089.3684999999996,
+        "largest-contentful-paint": 18302.79118800353,
+        "total-blocking-time": 41,
+        "cumulative-layout-shift": 0.05217630087145415,
+        "speed-index": 3656.3569619985155,
+        "total-byte-weight": 3393239
+      },
+      "failingSeoAudits": []
+    },
+    {
+      "run": "Final PR preview, review toolbar excluded",
+      "url": "https://deploy-preview-1--dorothe-blake-violin.netlify.app/",
+      "fetchTime": "2026-10-13T12:51:36.428Z",
+      "lighthouseVersion": "13.5.0",
+      "performanceScore": 80.0,
+      "seoScore": 69.0,
+      "throttlingMethod": "simulate",
+      "blockedUrlPatterns": [
+        "*/.netlify/scripts/cdp*"
+      ],
+      "metrics": {
+        "first-contentful-paint": 1733.4136,
+        "largest-contentful-paint": 4566.75695,
+        "total-blocking-time": 36,
+        "cumulative-layout-shift": 0,
+        "speed-index": 4753.819425997051,
+        "total-byte-weight": 393982
+      },
+      "failingSeoAudits": [
+        "is-crawlable"
+      ]
+    }
+  ]
+}

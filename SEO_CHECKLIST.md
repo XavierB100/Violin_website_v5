@@ -1,168 +1,55 @@
-# SEO Optimization Checklist for Dorothé Blake Violinist Website
+# SEO and mobile review — 13 October 2026
 
-## ✅ Completed Optimizations
+## In this PR
 
-### Technical SEO
-- [x] **Robots.txt** - Updated with proper domain and comprehensive directives
-- [x] **Sitemap.xml** - Created comprehensive XML sitemap
-- [x] **.htaccess** - Added performance and security optimizations
-- [x] **Canonical URLs** - Added to all pages
-- [x] **HTTPS Redirects** - Configured in .htaccess
-- [x] **WWW to Non-WWW** - Redirect configured
-- [x] **GZIP Compression** - Enabled in .htaccess
-- [x] **Browser Caching** - Configured for optimal performance
-- [x] **Security Headers** - Added XSS protection, frame options, etc.
+- Preserve the original public headline, biography, services, prices and testimonials.
+- Shorten the homepage title to `London Wedding & Event Violinist | Dorothé Blake`; retain its existing description.
+- Align canonical, Open Graph, breadcrumb, internal-link and sitemap URLs with the clean URLs already used by the live host. Explicit Netlify redirects consolidate `.html` variants.
+- Describe the existing starting prices with `PriceSpecification.minPrice`, rather than implying a fixed final quote. Link the same person identity across artist and booking markup.
+- Add missing booking social-image descriptions and UK locale metadata.
+- Provide responsive WebP copies of the existing photographs, plus AVIF sources for the hero and About portrait with WebP fallbacks. The large hero copy is 138,612 bytes versus 1,688,159 bytes for the original. Original files remain available.
+- Defer audio/video downloads until playback, and lazy-load the calendar.
+- Serve the existing Cormorant Garamond and Inter fonts locally, with early preload and swap rendering; retain their OFL licences. This removes the Google Fonts stylesheet request and two external font connections.
+- Use accurate, descriptive gallery alt text without changing the visible biography or service copy.
+- Restore the original gold styling; compact testimonials and remove the extra form/availability prose requested during review.
+- Improve mobile navigation, portrait layout, uncropped gallery photographs, keyboard access, enquiry shortcuts and form feedback.
+- Count `generate_lead` only after EmailJS acknowledges a successful enquiry. Remove the second booking page-view event. This event means provider acceptance, not inbox delivery or a confirmed booking.
 
-### Meta Tags & Content
-- [x] **Title Tags** - Optimized for target keywords
-- [x] **Meta Descriptions** - Compelling and keyword-rich
-- [x] **Meta Keywords** - Comprehensive keyword targeting
-- [x] **Author Tags** - Added to all pages
-- [x] **Language Tags** - Properly configured
-- [x] **Geo Tags** - London and UK targeting
-- [x] **Viewport Meta** - Mobile optimization
+## Verified before deployment
 
-### Social Media Optimization
-- [x] **Open Graph Tags** - Facebook sharing optimization
-- [x] **Twitter Cards** - Twitter sharing optimization
-- [x] **Social Media Images** - Proper image URLs
-- [x] **Social Media Links** - Instagram, Facebook, YouTube
+- Live HTTP and www variants redirect to HTTPS/non-www; unknown paths return 404.
+- Live social-share image returns 200 with image/jpeg. Security and cache headers are present.
+- Local homepage, booking, privacy, terms and 404 pages checked at 320, 390, 768, 820, 1060 and 1440 CSS pixels.
+- Local link/fragment/image checks, JSON-LD parsing, canonical/sitemap consistency and JavaScript syntax checks.
+- Menu open/close, Escape focus return and mobile-to-desktop resize unlock.
+- Local form tests with an in-memory EmailJS stub: one request while pending, success reset/lead event, failure preservation/no extra lead, and unavailable-provider fallback. No real enquiries sent.
 
-### Structured Data
-- [x] **Person Schema** - Dorothé Blake professional information
-- [x] **Service Schema** - Violin performance services
-- [x] **Offer Schema** - Pricing and service details
-- [x] **LocalBusiness Schema** - London-based business
-- [x] **Contact Information** - Phone, email, address
+Run `python3 scripts/check-site.py`, `node --check js/script.js` and `node --check js/analytics.js` for the repository checks.
 
-### Content Optimization
-- [x] **Target Keywords** - Professional violinist, wedding violinist, London violinist
-- [x] **Header Structure** - Proper H1, H2, H3 hierarchy
-- [x] **Alt Text** - All images have descriptive alt text
-- [x] **Internal Linking** - Proper navigation structure
-- [x] **Call-to-Actions** - Clear booking and contact buttons
+## Needs account access or post-release verification
 
-### Performance Optimization
-- [x] **Image Optimization** - Lazy loading implemented
-- [x] **CSS/JS Minification** - Ready for production
-- [x] **Font Loading** - Preconnect and optimized
-- [x] **Mobile Responsive** - Fully responsive design
+- Search Console: submit `https://violinplayer.pro/sitemap.xml`, inspect the homepage and booking URL, and check indexing, search queries and actual mobile Core Web Vitals. Tags alone do not establish indexing or rankings.
+- GA4: confirm consented traffic in Realtime and mark `generate_lead` as a key event if desired. Verify consent accept/reject behaviour on the production domain and a real enquiry in the inbox.
+- Review the existing Google Business Profile, if there is one, for accurate service area and contact details. Do not publish a private home address or invent reviews, awards or venue affiliations.
+- Use only genuine client reviews and performance material, with permission, for future updates.
+- Test on a physical iPhone and Android device. Desktop CSS viewport checks do not reproduce every Safari date-input or browser-toolbar behaviour.
+- CookieYes, Google Calendar, YouTube and EmailJS are external dependencies. Calendar/contact fallback links remain available when embeds are blocked.
 
-### Analytics & Tracking
-- [x] **Google Analytics Setup** - Ready for implementation
-- [x] **Event Tracking** - Form submissions, phone clicks, etc.
-- [x] **Conversion Tracking** - Service inquiries and bookings
+## Sources
 
-## 🎯 Target Keywords
+- [Google canonical URL guidance](https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls)
+- [Google sitemap guidance](https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap)
+- [Schema.org PriceSpecification](https://schema.org/PriceSpecification)
+- [GA4 recommended events](https://developers.google.com/analytics/devguides/collection/ga4/reference/events#generate_lead)
 
-### Primary Keywords
-- Professional violinist
-- Wedding violinist
-- London violinist
-- Event violinist
+Metadata and usability improvements do not guarantee rankings or bookings. Measure actual enquiry quality and search traffic after release.
 
-### Secondary Keywords
-- Funeral violinist
-- Corporate event violinist
-- UK violinist
-- Wedding music
-- Live violin music
+## Final performance check
 
-### Long-tail Keywords
-- Professional violinist London
-- Wedding violinist UK
-- Event violinist for hire
-- Funeral violinist London
-- Corporate event violinist UK
+Single simulated-mobile Lighthouse runs: production performance 68/100, final PR preview 80/100. First contentful paint changed from 3.1s to 1.7s; largest contentful paint from 18.3s to 4.6s; initial transfer from 3,314 KiB to 385 KiB. Final layout shift was 0 and total blocking time 40ms. The preview-only Netlify review toolbar was blocked for the final measurement; the site's own consent, analytics and enquiry scripts were retained. These are lab observations, not real-user or ranking guarantees.
 
-## 📊 SEO Metrics to Monitor
+The raw summary and measurement settings are in [docs/performance-review-2026-10-13.json](docs/performance-review-2026-10-13.json). LCP still exceeds Google's 2.5s good-experience target in this simulated run, so post-release field measurement remains necessary. The preview's SEO score is 69 solely because Netlify intentionally sends `X-Robots-Tag: noindex`; every other automated SEO check passed. Do not remove preview noindex to improve the score.
 
-### Technical Metrics
-- Page load speed (target: <3 seconds)
-- Mobile usability score
-- Core Web Vitals
-- Security score
+The final visual review restores the original gold colours as requested; the earlier zero-violation accessibility scan is not a conformance claim for the restored palette. Gallery photos retain full proportions, recordings use a separate grid, and testimonial author spacing is 20px. Checked at 320, 390, 580, 768, 820, 1024 and 1440 pixels with no gallery overlap or horizontal overflow.
 
-### Search Performance
-- Organic search rankings
-- Click-through rates
-- Bounce rate
-- Time on site
-
-### Conversion Metrics
-- Contact form submissions
-- Phone call clicks
-- WhatsApp clicks
-- Booking page visits
-
-## 🔧 Next Steps
-
-### Immediate Actions
-1. **Set up Google Analytics** - Replace GA_MEASUREMENT_ID with actual ID
-2. **Create Google Search Console** - Submit sitemap and monitor performance
-3. **Generate Favicon** - Create proper .ico file
-4. **Test Performance** - Use Google PageSpeed Insights
-5. **Submit to Search Engines** - Google, Bing, DuckDuckGo
-
-### Ongoing Optimization
-1. **Content Updates** - Regular blog posts or testimonials
-2. **Local SEO** - Google My Business optimization
-3. **Backlink Building** - Industry partnerships and mentions
-4. **Review Management** - Encourage client reviews
-5. **Performance Monitoring** - Regular speed and SEO audits
-
-## 📈 Expected Results
-
-### Short-term (1-3 months)
-- Improved search engine indexing
-- Better mobile performance scores
-- Enhanced social media sharing
-
-### Medium-term (3-6 months)
-- Higher search rankings for target keywords
-- Increased organic traffic
-- More booking inquiries
-
-### Long-term (6+ months)
-- Established authority in violin performance niche
-- Consistent organic traffic growth
-- Higher conversion rates
-
-## 🛠️ Tools for Monitoring
-
-### Free Tools
-- Google Search Console
-- Google Analytics
-- Google PageSpeed Insights
-- GTmetrix
-- Screaming Frog SEO Spider
-
-### Paid Tools (Optional)
-- SEMrush
-- Ahrefs
-- Moz Pro
-- Ubersuggest
-
-## 📝 Maintenance Schedule
-
-### Weekly
-- Check Google Analytics for traffic patterns
-- Monitor search console for errors
-- Review performance metrics
-
-### Monthly
-- Update content if needed
-- Check for broken links
-- Review search rankings
-- Analyze conversion data
-
-### Quarterly
-- Comprehensive SEO audit
-- Performance optimization review
-- Content strategy updates
-- Competitor analysis
-
----
-
-**Last Updated**: January 27, 2025
-**Next Review**: February 27, 2025 
+Reference: [Google's Core Web Vitals guidance](https://developers.google.com/search/docs/appearance/core-web-vitals).
