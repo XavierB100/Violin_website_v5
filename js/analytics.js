@@ -16,25 +16,19 @@ gtag('config', 'G-1TCPHK7E7W', {
   }
 });
 
-// Track form submissions
+// Count a lead only after the enquiry provider acknowledges success.
 document.addEventListener('DOMContentLoaded', function() {
   const contactForm = document.getElementById('contact-form');
   if (contactForm) {
-    contactForm.addEventListener('submit', function() {
-      gtag('event', 'form_submit', {
+    contactForm.addEventListener('enquiry:sent', function() {
+      gtag('event', 'generate_lead', {
         'event_category': 'Contact',
         'event_label': 'Contact Form'
       });
     });
   }
   
-  // Track booking page visits
-  if (window.location.pathname.includes('booking.html')) {
-    gtag('event', 'page_view', {
-      'event_category': 'Booking',
-      'event_label': 'Booking Page'
-    });
-  }
+  // gtag config already records a page view, including the clean /booking URL.
   
   // Track phone number clicks
   const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
