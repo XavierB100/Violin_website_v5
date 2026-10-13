@@ -720,8 +720,8 @@ textarea:focus {
 
 .social-links a {
   display: inline-grid;
-  width: 42px;
-  height: 42px;
+  width: 44px;
+  height: 44px;
   place-items: center;
   border: 1px solid var(--line);
   color: var(--gold-dark);
@@ -1271,8 +1271,7 @@ main.container ul {
     width: min(100% - 28px, var(--container));
   }
 
-  .hero-actions,
-  .social-links {
+  .hero-actions {
     align-items: stretch;
   }
 
@@ -1367,6 +1366,14 @@ main.container ul {
 .audio-container { aspect-ratio: auto; min-width: 0; }
 .audio-container audio { min-width: 0; }
 .footer-links a { min-height: 44px; display: inline-flex; align-items: center; }
+
+@media (max-width: 780px) {
+  footer { padding: 26px 0 16px; }
+  .footer-container { gap: 18px; }
+  .footer-contact { display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: 0.9rem; }
+  .footer-links { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0 10px; font-size: 0.86rem; }
+  .footer-bottom { margin-top: 16px; padding-top: 12px; font-size: 0.8rem; }
+}
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
